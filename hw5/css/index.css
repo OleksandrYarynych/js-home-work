@@ -1,0 +1,48 @@
+*{
+    padding: 0;
+    margin: 0;
+    outline: none;
+    box-sizing: border-box;
+}
+
+body{
+    padding: 30px;
+    width: 100%;
+}
+
+.app{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.app-help-arr{
+    margin: 15px auto;
+}
+
+.app__items{
+    display: flex;
+    justify-content: center;
+}
+
+.app__items:not(:last-child){margin-bottom: 20px;}
+
+.item-button{
+    margin-right: 15px;
+    font-size: 20px;
+    padding: 15px 25px;
+    background-color: rgb(54, 201, 74);
+    border: 3px solid rgb(0, 184, 24);
+    border-radius: 30px;
+}
+
+.item-button:hover{
+    background-color: #fff;
+    transition-duration: 1s;
+}
+
+.item-result{
+    font-size: 20px;
+   margin-top: 20px;
+}
