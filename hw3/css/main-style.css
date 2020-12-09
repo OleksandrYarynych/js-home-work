@@ -1,0 +1,44 @@
+* {
+  padding: 0;
+  margin: 0;
+  outline: none;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 30px;
+  width: 100%;
+}
+
+.app {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.app__items {
+  display: flex;
+  justify-content: center;
+}
+.app__items:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.item-button {
+  margin-right: 15px;
+  font-size: 20px;
+  padding: 15px 25px;
+  background-color: #36c94a;
+  border: 3px solid #00b818;
+  border-radius: 30px;
+}
+.item-button:hover {
+  background-color: #fff;
+  transition-duration: 1s;
+}
+
+.item-result {
+  font-size: 20px;
+  margin: auto 0;
+}
