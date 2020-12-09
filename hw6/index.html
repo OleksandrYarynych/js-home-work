@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <mea name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>hw 6 objects</title>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital@1&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="./css/reset.css">
+        <link rel="stylesheet" href="./css/style.css">
+    </head>
+    <body>
+        <section class="wrapper">
+            <div class="task">
+                <p class=" font">Оберіть студента, предмети якого ви хочете переглянути</p>
+                <select name="select-student" id="select-student-to-get-subjects" class="select">
+                    <option value="chose-student" class="task_select-student__option" disabled  selected>Оберіть студента</option>
+                    <option class="task_select-student__option" value="Tanya">Tanya</option>
+                    <option class="task_select-student__option" value="Victor">Victor</option>
+                    <option class="task_select-student__option" value="Anton">Anton</option>
+                </select>
+                <button class="task__button">Показати дані</button>
+            </div>
+            <div class="answer-block"></div>
+        </section>
+        <section class="wrapper">
+            <div class="task">
+                <p class=" font">Оберіть студента, для якого потрібно вивести середній бал</p>
+                <select name="select-student" id="select-student-for-average-mark" class="select">
+                    <option value="chose-student" class="task_select-student__option" disabled  selected>Оберіть студента</option>
+                    <option class="task_select-student__option" value="Tanya">Tanya</option>
+                    <option class="task_select-student__option" value="Victor">Victor</option>
+                    <option class="task_select-student__option" value="Anton">Anton</option>
+                </select>
+                <button class="task__button">Показати дані</button>
+            </div>
+                <div class="answer-block">  </div>
+        </section>
+        <section class="wrapper">
+            <div class="task">
+                <p class=" font">Переглянути інформацію про вибраного студента</p>
+                <select name="select-student" id="select-student-to-see-information" class="select">
+                    <option value="chose-student" class="task_select-student__option" disabled  selected>Оберіть студента</option>
+                    <option class="task_select-student__option" value="Tanya">Tanya</option>
+                    <option class="task_select-student__option" value="Victor">Victor</option>
+                    <option class="task_select-student__option" value="Anton">Anton</option>
+                </select>
+                <button class="task__button">Показати дані</button>
+            </div>
+                <div class="answer-block"> </div>
+        </section>
+        <section class="wrapper">
+            <div class="task">
+                <p class=" font">Вивести список студентів згідно вибраної категорії</p>
+                <select name="select-category" id="select-category" class="select">
+                    <option value="not-chosen-category" class="option" disabled selected>Оберіть категорію </option>
+                    <option value="by-marks" class="option">Найкраща оцінка</option>
+                    <option value="be-ABC" class="option">в алфавітному порядку</option>
+                </select>
+                <button class="task__button">Показати дані</button>
+            </div>
+                <div class="answer-block"></div>
+        </section>
+        <section class="wrapper">
+            <div class="task">
+                <p class=" font">Введіть Ваше слово</p>
+                <label id="label">
+                    <input class="label__input-fled" type="text" >
+                    <p class="label-text">Введіть слово</p>
+                </label>
+                <button class="task__button">Показати дані</button>
+            </div>
+                <div class="answer-block"></div>
+        </section>
+        <script src="js/main.js"></script>
+        <script src="js/html-actions.js"></script>
+    </body>
+</html>
