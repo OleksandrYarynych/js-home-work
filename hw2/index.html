@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Home work 2</title>
+
+        <link rel="stylesheet" href="./css/reset.css">
+        <link rel="stylesheet" href="./css/index.css">
+    </head>
+    <body>  
+        <form class="app">
+            <p class="app__title">
+                Home work 2
+            </p>
+            <div class="app__input-block app_margin-top-15px">
+                <label for="first-number" >
+                    Введіть перше ціле число з послідовності
+                </label>
+                <input type="number" id="first-number"  class="app__input-block__input app_margin-top-10px">
+            </div>
+
+            <div class="app__input-block app_margin-top-15px">
+                <label for="last-number" >
+                    Bведіть останнє ціле число послідовності
+                </label>
+                <input type="number" id="last-number"  class="app__input-block__input app_margin-top-10px">
+            </div>
+
+            <div class="app__input-block app_margin-top-15px">
+                <label for="app__input-block__select" >
+                    Чи потрібно при підрахунку пропускати парні числа?
+                </label>
+                <select name="sum-only-odd-numbers" id="app__input-block__select" class="app_margin-top-10px">
+                    <option value="false">Ні</option>
+                    <option value="true">Так</option>
+                </select>
+            </div>
+            <button id="app__submit-button">Зберегти дані</button>
+            <p id="app__result" class="app_margin-top-15px"></p>
+        </form>
+        <script src="js/main.js"></script>
+    </body>
+</html>
