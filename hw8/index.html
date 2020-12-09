@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>hw8</title>
+
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@500&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="./css/reset.css">
+        <link rel="stylesheet" href="./css/index.css">
+    </head>
+    <body>
+        <div class="app">
+            <p class="Advanced-task" >Для  перегляду Advanced завдання перейдіть в консоль</p>
+            <div class="wrapper">
+                <div class="add-student-form">
+                    <input type="text" class="input-feld" id="input-univercity" placeholder="Введіть Ваш університет">
+                    <input type="text" class="input-feld" id="input-course" placeholder="введіть Ваш курс">
+                    <input type="text" class="input-feld" id="input-full-name" placeholder="Введіть Ваше повне ім'я">
+                    <input type="text" class="input-feld" id="input-marks" placeholder="Введіть поточні оцінки нового студента">
+                    <button id="add-student-button" class="button">Додати студента</button>
+                    <div class="answer-block" id="add-student-answer"></div>
+                </div>
+            </div>
+            <div class="wrapper">
+                <div class="info-block">
+                    <div>
+                        <select name="" id="info-select" class="select">
+                            <option style="color:#D5D8DC" value="not chosen" disabled selected>Не обрано студента</option>
+                            <option  value="Ivan Ivanov"  >Ivan Ivanov</option>
+                            <option  value="Petro Petrenko"  >Petro Petrenko</option>
+                            <option  value="Ruslan Barakov"  >Ruslan Barakov</option>
+                        </select>
+                        <button id="show-info" class="button">Показати інформацію</button>
+                    </div>
+                    <div class="answer-block" id="info-answer"></div>
+                </div>
+            </div>
+            <div class="wrapper">
+                <div class="marks-block">
+                    <div>
+                        <select name=""  id="mark-select" class="select">
+                            <option style="color:#D5D8DC" value="not chosen" disabled selected>Не обрано студента</option>
+                            <option  value="Ivan Ivanov"  >Ivan Ivanov</option>
+                            <option  value="Petro Petrenko"  >Petro Petrenko</option>
+                            <option  value="Ruslan Barakov"  >Ruslan Barakov</option>
+                        </select>
+                        <button class="button" id="get-marks-button">Показати оцінки</button>
+                    </div>
+                    <div class="answer-block" id="mark-answer"></div>
+                </div>
+            </div>
+            <div class="wrapper">
+                <div class="add-mark-block">
+                    <select name="" id="add-mark-select" class="select">
+                        <option  style="color:#D5D8DC" value="not chosen" disabled selected>Не обрано студента</option>
+                        <option  value="Ivan Ivanov"  >Ivan Ivanov</option>
+                        <option  value="Petro Petrenko"  >Petro Petrenko</option>
+                        <option  value="Ruslan Barakov"  >Ruslan Barakov</option>
+                    </select>
+                    <p>Введіть одну або декілька оцінок через пробіл (оцінки які не входять в діапазон [0,5] не будуть враховуватись)</p>
+                    <input type="text" class="input-feld" id="input-mark" placeholder="Введіть оцінку">
+                    <button id="add-mark-button" class="button">Додати оцінку </button>
+                    <div class="answer-block" id="add-marks-answer"></div>
+                </div>
+            </div>
+            <div class="wrapper">              
+                <div class="dismiss-student-block">
+                    <div>
+                        <select name="" id="dismiss-student-select" class="select">
+                            <option style="color:#D5D8DC" value="not chosen" disabled selected>Не обрано студента</option>
+                            <option  value="Ivan Ivanov"  >Ivan Ivanov</option>
+                            <option  value="Petro Petrenko"  >Petro Petrenko</option>
+                            <option  value="Ruslan Barakov"  >Ruslan Barakov</option>
+                        </select>
+                        <button id="delete-student" class="button">Відрахувати студента</button>
+                    </div>
+                    <div class="answer-block" id="dismiss-student-answer"></div>
+                </div>
+            </div>
+            <div class="wrapper">
+                <div class="recover-student-block">
+                    <div>
+                        <select name="" id="recover-student-select" class="select">
+                            <option style="color:#D5D8DC" value="not chosen" disabled selected>Не обрано студента</option>
+                            <option  value="Ivan Ivanov"  >Ivan Ivanov</option>
+                            <option  value="Petro Petrenko"  >Petro Petrenko</option>
+                            <option  value="Ruslan Barakov"  >Ruslan Barakov</option>
+                        </select>
+                        <button id="recover-student" class="button answer-block">повернути студента</button>
+                    </div>
+                    <div class="answer-block" id="recover-student-answer"> </div>
+                </div>
+            </div>
+        </div>
+        <script src="js/Student.js"></script>
+        <script src="js/BudgetStudent.js"></script>
+        <script src="js/html-actions.js"></script>
+    </body>
+</html>
