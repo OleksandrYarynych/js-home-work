@@ -5,7 +5,7 @@
     box-sizing: border-box;
 }
 
-#big-block{
+#wrapper{
     width: 504px;
     height: 502px;
     border: 2px solid #000000;

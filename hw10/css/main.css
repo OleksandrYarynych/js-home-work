@@ -1,0 +1,49 @@
+body{
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/meropriyatie1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+}
+
+.app{
+    width: 100%;
+    height: 100%;
+    min-height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.key{
+    color: #8041FF  ;
+    border: 4px solid #8041FF  ;
+    padding: 30px 10px;
+    text-align: center;
+    background-color: #000000 ;
+    width: 100px;
+    height: 60px;   
+    cursor: pointer;
+}
+
+.key:not(:last-child){
+    margin-right: 40px;
+}
+
+.key-focus{
+    -webkit-box-shadow: 0px 1px 10px 11px rgba(255, 191, 0, 1);
+    -moz-box-shadow: 0px 1px 10px 11px rgba(255, 191, 0, 1);
+    box-shadow: 0px 1px 10px 11px rgba(255, 191, 0, 1);
+}
+
+.key-name{
+    font-size: 25px;
+    font-weight: bolder;
+    margin-bottom: 10px;
+    opacity: 1;
+}
+
+.sound-namme{
+    font-size: 14px;
+}
