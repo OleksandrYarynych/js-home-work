@@ -1,27 +1,36 @@
-const makeChinaCharacter=()=>{
-  let sign=Date.now();
-  sign=sign.toString().slice(sign.length-5,5);
-  sign=String.fromCharCode(sign);
-  return sign;  
-}
+const makeChinaCharacter = () =>
+  new Promise((resolve) => {
+    const now = Date.now().toString();
+    const nowLastFiveChars = now.slice(now.length - 5);
+    console.log(nowLastFiveChars);
+    return resolve(String.fromCharCode(nowLastFiveChars));
+  });
 
-const getRandomChinese=(length)=>new Promise((resolve,reject)=>{
-  if(length<0){
-    return reject("length is negative number")
+async function getRandomChinese(length) {
+  let i = 0;
+  let result = "";
+  if (length <= 0) {
+    return "your length is less than or equal to 0  Your length is " + length;
   }
-  let i=0;
-  let finalString="";
-  while(i<length){
-    finalString+=makeChinaCharacter();
+  const makeAsyncChinaChar = () =>
+    new Promise((resolve) => {
+      setTimeout(() => {
+        return resolve(makeChinaCharacter());
+      }, 50);
+    });
+  while (i < length) {
+    result += await makeAsyncChinaChar();
     i++;
   }
-  return resolve(finalString);
-})
+  return result;
+}
 
-getRandomChinese(5)
-  .then((resolve)=>console.log(resolve))
-  .catch((reject)=>console.log(reject));
-
-// getRandomChinese(-5)
-//   .then((resolve)=>console.log(resolve))
-//   .catch((reject)=>console.log(reject))
+console.log(
+  "Нижче будуть наведені результати виклику Date.now() та результат проміса"
+);
+getRandomChinese(4)
+  .then((resolve) => console.log(resolve))
+  .catch((reject) => console.log(reject));
+getRandomChinese(-5)
+  .then((resolve) => console.log(resolve))
+  .catch((reject) => console.log(reject));
