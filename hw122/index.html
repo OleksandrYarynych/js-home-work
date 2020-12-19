@@ -7,26 +7,31 @@
 
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/index.css">
   </head>
   <body>
     <div class="app">
       <div class="info">
-        <button id="show-information-about-heros"></button>
-        <select name="" id="">
-          <option value=""></option>
-          <option value=""></option>
-          <option value=""></option>
-          <option value=""></option>
-          <option value=""></option>
-        </select>
-        <div class="planets-block"><button id="show-planets"></button></div>
+        <div>
+          <button class="button" id="show-information-about-heros">Показати </button>
+          <select class="select" name="" id="select-number-of-film">
+            <option value="not chosen" selected disabled>Оберіть номер фільму</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+          </select>
+        </div>
+        <table id="hero-table" class="table"></table>
       </div>
+        <div class="planets-block">
+          <button class="button" id="show-planets">Вивести назви всіх планет</button>
+          <div id="planets-block" style="margin-top: 50px;"></div>
+        </div>
+        <button class="button" id="nextPage">Go to the next page</button>
     </div>
-
-
-
-
-    
     <script src="js/main..js"></script>
   </body>
 </html>
