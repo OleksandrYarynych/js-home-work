@@ -10,7 +10,8 @@ const addRowsToHeroTable = ({ name, birth_year, gender }) => {
   heroTabe.append(row);
   row.classList.add("tr");
   const tableDataArray = [];
-  for (let i = 0; i < 3; i++) {
+  const tdTagsInRow=3;
+  for (let i = 0; i < tdTagsInRow; i++) {
     tableDataArray.push(document.createElement("TD"));
     tableDataArray[i].classList.add("td");
   }
@@ -40,31 +41,27 @@ const createParagraphsForPlanets = ({ name }) => {
   i++;
 };
 
-showHeroBtn.addEventListener("click", function () {
-  fetch("https://swapi.dev/api/people")
-    .then((res) => res.json())
-    .then((res) => {
-      const herosFromChosenFilm = res.results.reduce(
-        (heroFromChosenFilm, hero) => {
-          if (getHeroFromChosenFilm(hero, selectNumberOfFilm.value)) {
-            heroFromChosenFilm.push(hero);
-          }
-          return heroFromChosenFilm;
-        },
-        []
-      );
-      heroTabe.innerHTML = "";
-      herosFromChosenFilm.map((hero) => addRowsToHeroTable(hero));
-    });
+showHeroBtn.addEventListener("click",async function () {
+  const res=await fetch("https://swapi.dev/api/people");
+  const data=await res.json();
+  const herosFromChosenFilm = data.results.reduce(
+    (heroFromChosenFilm, hero) => {
+      if (getHeroFromChosenFilm(hero, selectNumberOfFilm.value)) {
+        heroFromChosenFilm.push(hero);
+      }
+      return heroFromChosenFilm;
+    },
+    []
+  );
+  heroTabe.innerHTML = "";
+  herosFromChosenFilm.map((hero) => addRowsToHeroTable(hero));
 });
 
-showPlanetsBtn.addEventListener("click", function () {
-  fetch("https://swapi.dev/api/planets")
-    .then((res) => res.json())
-    .then((res) => {
-      planetsBlock.innerHTML = "";
-      res.results.map((planet) => createParagraphsForPlanets(planet));
-    });
+showPlanetsBtn.addEventListener("click",async function () {
+  const res=await fetch("https://swapi.dev/api/planets");
+  const data=await res.json();
+  planetsBlock.innerHTML = "";
+  await data.results.map((planet) => createParagraphsForPlanets(planet))
 });
 
 goToTheNextPageBtn.addEventListener("click", function () {
